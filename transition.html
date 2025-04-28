@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebProg.io</title>
+
+    <script defer src="https://unpkg.com/alpinejs@3.2.2/dist/cdn.min.js"></script>
+
+    <style>
+        .slide-fade-enter{
+            transition: all .3s ease-out;
+        }
+        .slide-fade-enter-start{
+            opacity: 0;
+            transform: translateX(40px);
+        }
+        .slide-fade-enter-end{
+            opacity: 100;
+            transform: translateX(0);
+        }
+        .slide-fade-leave{
+            transition: all .3s ease-in;
+        }
+        .slide-fade-leave-start{
+            opacity: 100;
+            transform: translateX(0);
+        }
+        .slide-fade-leave-end{
+            opacity: 0;
+            transform: translateX(40px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div x-data="{ open: false }">
+        <button @click="open = ! open">Toggle</button>
+
+        <div x-show="open" x-transition.duration.1000ms.delay.100ms.scale.origin.top.left>
+            <ul style="border: 2px solid; width: 200px;">
+                <li>Lorem, ipsum dolor.</li>
+                <li>Placeat, eius incidunt!</li>
+                <li>Voluptates, laborum nostrum!</li>
+            </ul>
+        </div>
+    </div> -->
+    <div x-data="{ open: false }">
+        <button @click="open = ! open">Toggle</button>
+
+        <div x-show="open"
+            x-transition:enter="slide-fade-enter"
+            x-transition:enter-start="slide-fade-enter-start"
+            x-transition:enter-end="slide-fade-enter-end"
+            x-transition:leave="slide-fade-leave"
+            x-transition:leave-start="slide-fade-leave-start"
+            x-transition:leave-end="slide-fade-leave-end"
+        >
+            <ul style="border: 2px solid; width: 200px;">
+                <li>Lorem, ipsum dolor.</li>
+                <li>Placeat, eius incidunt!</li>
+                <li>Voluptates, laborum nostrum!</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
