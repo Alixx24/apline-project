@@ -1,0 +1,72 @@
+<!-- scrool and x-on -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebProg.io</title>
+
+    <script defer src="https://unpkg.com/alpinejs@3.2.2/dist/cdn.min.js"></script>
+
+</head>
+
+<body>
+
+    <div x-data>
+        <!-- <button x-on:click="console.log('Hello World!')">Say Hi</button> -->
+        <!-- <button @click="handleClick($event,'WebProg.io')">Say Hi</button> -->
+
+        <!-- <input type="text" @keyup.enter="alert('Submitted!')"> -->
+        <!-- <input type="text" @keyup.shift.enter="alert('Submitted!')"> -->
+
+
+        <!-- <form @submit.prevent="console.log('submitted')" action="/foo">
+            <button>Submit</button>
+        </form> -->
+
+
+        <!-- <div @click="console.log('I will not get logged')">
+            <button @click.stop>Click Me</button>
+        </div> -->
+
+
+        <!-- <div x-data="{ open: false }">
+            <button @click="open = ! open">Toggle</button>
+
+            <div x-show="open" @click.outside="open = false">
+                <ul style="border: 3px solid; width: 200px;">
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Neque, consequuntur qui.</li>
+                    <li>Nostrum, voluptatum expedita.</li>
+                </ul>
+            </div>
+        </div> -->
+
+        <!-- <input type="text" @keyup.enter.window="alert('Submitted!')"> -->
+
+        <!-- <button @click.once="console.log('I will only log once')">...</button> -->
+
+        <!-- <input @input.debounce.500ms="console.log('debounce')"> -->
+
+        <!-- <div style="height: 200px;" @scroll.window.throttle="console.log('throttle')">...</div> -->
+
+
+        <button @click.self="console.log('self')">
+            Click Me
+        
+            <img src="https://alpinejs.dev/alpine_long.svg">
+        </button>
+
+    </div>
+
+
+    <script>
+        // function handleClick(e,title){
+        //     console.log(e,title)
+        // }
+    </script>
+</body>
+
+</html>
