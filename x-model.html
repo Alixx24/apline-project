@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebProg.io</title>
+
+    <script defer src="https://unpkg.com/alpinejs@3.2.2/dist/cdn.min.js"></script>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div x-data="{ show: true , colors: [], colorsSelect:[] }">
+        <input type="checkbox" value="green" x-model="colors">
+        <input type="checkbox" value="orange" x-model="colors">
+        <input type="checkbox" value="yellow" x-model="colors">
+
+        Colors: <span x-text="colors"></span>
+        <hr>
+
+        <select x-model="colorsSelect" multiple>
+            <option >Red</option>
+            <option >Green</option>
+            <option >Blue</option>
+        </select>
+        Colors: <span x-text="colorsSelect"></span>
+    </div>
+
+</body>
+
+</html>
